@@ -1,0 +1,9 @@
+<div class="lattice" ng-controller="bgController" bg></div>
+<div class="page-wrapper index" id="page-wrapper">
+	<div class="header" id="header" ui-view="header"></div>
+	<div class="main" ui-view="main"></div>
+	<div class="about-new" ui-view="aboutNew"></div>
+	<div class="footer" ui-view="footer"></div>
+</div>
+<div ng-controller="characterController" swiper-character ng-show="characterState"></div>
+<div ng-controller="tamashiiController" swiper-tamashii ng-show="tamashiiState"></div>

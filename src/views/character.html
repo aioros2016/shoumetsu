@@ -1,0 +1,15 @@
+<div class="character-list metro-style" id="button-character">
+	<ul>
+		<li ng-repeat="item in character">
+			<a href="javascript:;" ng-click="showCharacter($index)">
+				<img ng-src="{{item.avatar}}" />
+				<span>
+					<h3>{{item.name}}</h3>
+					<p>{{item.cv}}</p>
+				</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+

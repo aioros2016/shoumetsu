@@ -1,0 +1,25 @@
+<div class="bg-layer">
+	<div class="inner-box">
+		<div class="top-area clearfix">
+			<div class="logo"><img src="images/logo.png" /></div>
+			<div class="right-box">
+				<div class="slogan">二次元酷跑创新之作</div>
+				<div class="download-box">
+					<a class="qr-code" href="javascript:;">
+						<span>二维码</span>
+						<span class="img"><img src="images/qr.png" /><em>扫一扫 立即下载游戏</em></span>
+					</a>
+					<a class="app" href="https://itunes.apple.com/cn/app/id1036169535" target="_blank">App Store</a>
+					<a class="android" href="http://update-athena.opd2c.com/download/xmds_opd2c.apk" target="_blank">android下载</a>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li ng-repeat="menu in nav" class="{{$index == nowPage ? menu.hClass+' active': menu.hClass}}"><a ui-sref="{{menu.href}}">{{menu.name}}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+

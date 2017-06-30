@@ -1,0 +1,33 @@
+<div ng-controller="bgController" bg></div>
+<div class="page-wrapper entry" id="page-wrapper">
+	<div class="entry-index">
+		<a ui-sref="index">进入官网</a>
+	</div>
+	<div class="logo">消灭都市</div>
+	<div class="reservation"><strong>4.0火热准备中...</strong> 目前已有<em>{{people}}</em>人预约</div>
+	<div class="button-reserve" ng-mousemove="showReward()" ng-mouseleave="hideReward()" ng-click="openModel()">点击预约</div>
+	<div class="reward-box" ng-show="reward">
+		<div class="inner-box">
+			<h2>预约奖励</h2>
+			<div class="list">
+				<ul>
+					<li ng-class="item.iClass" ng-repeat="item in item"></li>
+				</ul>
+			</div>
+			<div class="tip">活动规则：游戏开启后，玩家可在游戏内【邮箱】领取预约奖励,奖励不叠加</div>
+		</div>
+	</div>
+	<div class="slogan" ng-click="playVideo()"></div>
+</div>
+<div class="entry-footer" id="entry-footer">
+	<div class="inner-box">
+		<div class="logo-area">
+			<a class="logo-jy" href="javascript:;">聚逸</a>
+			<a class="logo-wf" href="javascript:;">wf</a>
+			<a class="logo-d2c" href="javascript:;">d2c</a>
+		</div>
+		<div class="copy-right">
+			<p>Copyright © 2017 上海东方明珠迪尔希文化传媒有限公司<br />Shanghai Oriental Pearl D2C Culture & Media CO ,Ltd<br />新广出审[2016]4009号  文网游进字[2016]0071号</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<div class="news-box">
+	<div class="title detail-title">
+		<h2>新闻中心</h2>
+		<div class="bread-crumbs">
+			<span>您所在的位置：</span>
+			<a class="first-child" ui-sref="index">首页</a>
+			<a ui-sref="news">新闻</a>
+		</div>
+	</div>
+	<div class="detail-box">
+		<div class="title">
+			<h3 ng-bind="detail.title"></h3>
+			<span>发布于 {{detail.updatedAt}}</span>
+		</div>
+		<div class="content">
+			<div ng-bind-html="detail.content | showAsHtml"></div>
+		</div>
+	</div>
+	<div class="no-data" ng-show="false">暂无数据...</div>
+</div>

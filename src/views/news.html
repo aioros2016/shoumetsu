@@ -1,0 +1,30 @@
+<div class="news-box">
+	<div class="title">
+		<h2>新闻中心</h2>
+		<div class="bread-crumbs">
+			<span>您所在的位置：</span>
+			<a class="first-child" ui-sref="index">首页</a>
+			<a ui-sref="news">新闻</a>
+		</div>
+	</div>
+	<div class="list">
+		<ul>
+			<li ng-repeat="list in list">
+				<a ui-sref="detail({id: list.postId})">[ 新闻 ]<span ng-bind="list.title"></span></a>
+				<em class="date" ng-bind="list.datetime | filterDate"></em>
+			</li>
+		</ul>
+	</div>
+	<div class="page-num" ng-hide="totPage == 1">
+		<ul>
+			<li><a class="{{curPage == 1 ? 'lock' : ''}}" href="javascript:;" ng-click="prevPage(page.current)">上一页</a></li>
+			<li><a class="{{curPage == totPage ? 'lock' : ''}}" href="javascript:;" ng-click="nextPage(page.current)">下一页</a></li>
+			<li><a class="{{curPage == totPage ? 'lock' : ''}}" href="javascript:;" ng-click="lastPage(page.total)">末页</a></li>
+		</ul>
+		<div class="total">
+			<span>第{{curPage}}页</span>
+			<span>共{{totPage}}页</span>
+		</div>
+	</div>
+	<div class="no-data" ng-show="totPage == 0">暂无数据...</div>
+</div>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="shoumetsu" ng-controller="globalController" xmlns:ng="http://angularjs.org" id="ng-app">
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="robots" content="all">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="keywords" content="消灭都市,消灭都市礼包,二次元手游,消灭都市跑酷手游,藤田麻衣子,花泽香菜,杉田智和,消灭都市iOS,消灭都市下载,消灭都市官方,消灭都市官方吧,消灭都市攻略"/>
+	    <meta name="description" content="剧情+跑酷+RPG消灭都市开创跑酷新纪元，超浓RPG元素完美融合，结束单一“跑酷”时代!超强剧情代入感，全新的二次元，一起体会「消灭都市」带来的前所未有的精彩感受吧!" />
+	    <meta name="renderer" content="webkit">
+	    <title>消灭都市</title>
+	    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	    <script>
+			var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+			var browser = navigator.userAgent.toLowerCase();
+			var isMobile = false;
+			for (var i = 0; i < mobileAgent.length; i++) {
+			    if (browser.indexOf(mobileAgent[i]) != -1) {
+			        isMobile = true;
+			        location.href = 'http://m-xmds.opd2c.com';
+			        break;
+			    };
+			};
+		</script>
+		<link href="css/swiper2.min.css" rel="stylesheet">
+	    <!--build:css css/style.min.css -->
+	    <link href="css/reset.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+	    <!-- endbuild -->
+	    <link type="text/css" href="less/style.less" rel="stylesheet/less" />
+	    <script src="//cdn.bootcss.com/less.js/2.5.3/less.min.js"></script>
+	</head>
+	<body>
+		<div class="app" ui-view="container"></div>
+		<div class="mask" ng-show="showMask" ng-click="hideAll()"></div>
+		<div ng-controller="modelController" model ng-show="showModel"></div>
+		<div ng-controller="videoController" video ng-show="showVideo"></div>
+		<div class="testa" ng-controller="audioController" audio></div>
+		<div model-qr></div>
+	    <script src="//cdn.bootcss.com/angular.js/1.2.32/angular.min.js"></script>
+	    <script src="//cdn.bootcss.com/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+	    <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	    <script src="js/parallax.min.js"></script>
+	    <script src="js/swiper2.min.js"></script>
+	    <!--build:js controllers/main.js -->
+	    <script src="routeConfig.js"></script>
+	    <script src="controllers/index.js"></script>
+	    <script src="controllers/header.js"></script>
+	    <script src="controllers/home.js"></script>
+	    <script src="controllers/character.js"></script>
+	    <script src="controllers/tamashii.js"></script>
+	    <script src="controllers/story.js"></script>
+	    <script src="controllers/news.js"></script>
+	    <script src="directive/bg.js"></script>
+	    <script src="directive/swiper_character.js"></script>
+	    <script src="directive/swiper_tamashii.js"></script>
+	    <script src="directive/model.js"></script>
+	    <script src="directive/video.js"></script>
+	    <script src="directive/audio.js"></script>
+	    <script src="directive/qr.js"></script>
+	    <!-- endbuild -->
+	    <script src="urlConfig.js"></script>
+	    <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-98342245-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<div class="home-list metro-style">
+	<div class="button-notice">
+		<h3>{{notice.title}}</h3>
+		<p>{{notice.content}}</p>
+	</div>
+	<div class="share">
+		<ul>
+			<li class="sina"><a href="http://weibo.com/u/5654093794?topnav=1&wvr=6&topsug=1" target="_blank"></a></li>
+			<li class="tieba"><a href="http://tieba.baidu.com/f?kw=%E6%B6%88%E7%81%AD%E9%83%BD%E5%B8%82%E5%AE%98%E6%96%B9&ie=utf-8" target="_blank"></a></li>
+			<li class="wx"><a href="javascript:;" ng-click="openQr()"></a></li>
+		</ul>
+	</div>
+	<div class="button-video">
+		<a href="javascript:;" ng-click="playVideo()">
+			<img src="images/contents_movie.jpg" />
+			<span>
+				<h3>《消灭都市》PV</h3>
+			</span>
+			<i class="play" ></i>
+		</a>
+	</div>
+	<div class="event-banner">
+		<ul>
+			<li ng-repeat="banner in banner" on-finish-render="ngRepeatFinished">
+				<a ng-href="{{banner.href}}"><img ng-src="{{banner.img}}" /></a>
+			</li>
+		</ul>
+		<ol>
+			<li class="{{iNow == $index ? 'active' : ''}}" ng-repeat="banner in banner">{{$index}}</li>
+		</ol>
+		<!--<div class="swiper-slide" ng-repeat="banner in banner" on-finish-render="ngRepeatFinished">
+			<a ng-href="{{banner.href}}"><img src="{{banner.img}}" /></a>
+		</div>-->
+	</div>
+	<div class="button-story">
+		<a href="javascript:;" ui-sref="story">
+			<img src="images/banner_signpaperCP.jpg" />
+			<span>
+				<h3>故事介绍</h3>
+			</span>
+		</a>
+	</div>
+	<div class="button-wiki">
+		<a href="http://xmdswiki.opd2c.com/" target="_blank">
+			<img src="images/banner_wiki.jpg" />
+			<span>
+				<h3>WIKI</h3>
+			</span>
+		</a>
+	</div>
+	<div class="button-character" id="button-character">
+		<ul>
+			<li ng-repeat="item in character" class="item{{$index+1}}">
+				<a href="javascript:;" ng-click="showCharacter($index)">
+					<img ng-src="{{item.avatar}}" />
+					<span>
+						<h3>{{item.name}}</h3>
+						<p>{{item.cv}}</p>
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="button-tamashii" id="button-tamashii">
+		<ul>
+			<li ng-repeat="item in homeTamashii" class="item{{$index+1}}">
+				<a href="javascript:;" ng-click="showTamashii($index)">
+					<img ng-src="{{item.avatar}}" />
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="frame-weibo">
+		<iframe width="100%" height="290" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=5654093794&verifier=a1bcb2e0&dpc=1"></iframe>
+	</div>
+</div>
+
+
